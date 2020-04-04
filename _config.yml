@@ -1,0 +1,15 @@
+# Dependencies
+markdown:         kramdown
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Cord
+tagline:          'A streaming platform'
+description:      'A data streaming platform for composing, aggregating and distributing arbitrary streams.'
+url:              https://cord-proj.org
+baseurl:          /
+
+github:
+  org:           https://github.com/cord-proj
