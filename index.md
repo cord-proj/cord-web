@@ -14,9 +14,9 @@ To interact with the Broker, Cord provides the
 CLI. As the project matures, this library will form the basis of a suite of adaptors for
 common technologies.
 
-## Crates
+## Modules
 
-Cord comprises three crates:
+The Cord Project comprises three modules (_crates_ in Rust parlance):
 
 1.  **[Cord Broker](https://github.com/cord-proj/cord-broker)** - the server binary that
     aggregates and distributes arbitrary streams
@@ -31,12 +31,16 @@ First, start a new [Cord Broker](https://github.com/cord-proj/cord-broker):
 
 **Docker**
 
-    $ docker run -d -p 7101:7101 --rm cord-broker
+```console
+docker run -d -p 7101:7101 --rm cord-broker
+```
 
 **Cargo**
 
-    $ cargo install cord-broker
-    $ cord-broker &
+```console
+cargo install cord-broker
+cord-broker &
+```
 
 Next, use the [Cord Client](https://github.com/cord-proj/cord-client) to interact with
 the Broker. You can implement Cord within your own project using the
@@ -47,30 +51,30 @@ Subscribe to a namespace:
 
 **Docker**
 
-    $ docker run --rm cord-client -a <broker_addr> sub /names
+```console
+docker run --rm cord-client -a <broker_addr> sub /names
+```
 
 **Cargo**
 
-    $ cargo install cord-client
-    $ cord-client sub /namespaces
+```console
+cargo install cord-client
+cord-client sub /namespaces
+```
 
 Publish to this namespace:
 
 **Docker**
 
-    $ docker run -it --rm cord-client -a <broker_addr> pub /names
-    Start typing to create an event, then press enter to send it to the broker.
-    Use the format: NAMESPACE=VALUE
-
-    /names/first=Daz
+```console
+docker run -it --rm cord-client -a <broker_addr> pub /names
+```
 
 **Cargo**
 
-    $ cord-client pub /names
-    Start typing to create an event, then press enter to send it to the broker.
-    Use the format: NAMESPACE=VALUE
-
-    /names/first=Daz
+```console
+cord-client pub /names
+```
 
 ## Etymology
 
