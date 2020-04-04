@@ -52,7 +52,7 @@ Subscribe to a namespace:
 **Docker**
 
 ```console
-docker run --rm cord-client -a <broker_addr> sub /names
+docker run --rm cord-client --address BROKER_ADDR sub /names
 ```
 
 **Cargo**
@@ -67,7 +67,7 @@ Publish to this namespace:
 **Docker**
 
 ```console
-docker run -it --rm cord-client -a <broker_addr> pub /names
+docker run -it --rm cord-client --address BROKER_ADDR pub /names
 ```
 
 **Cargo**
